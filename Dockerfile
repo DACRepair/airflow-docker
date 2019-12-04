@@ -1,4 +1,4 @@
-FROM apache/airflow:master-python3.7-ci
+FROM apache/airflow:master-ci
 
 COPY webserver_config.py /root/airflow
 
