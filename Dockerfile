@@ -15,7 +15,6 @@ RUN pip3 install --upgrade setuptools pip \
     
 # Add my custom DAG Repo manager plugin
 RUN pip install git+https://github.com/DACRepair/airflow-repoman.git
-COPY webserver_config.py /root/airflow
 
 ENTRYPOINT ["/usr/local/bin/airflow"]
 CMD ["shell"]
