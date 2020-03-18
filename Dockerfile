@@ -11,7 +11,7 @@ RUN pip3 install --upgrade setuptools pip \
     && pip install apache-airflow \
     && pip install apache-airflow[${AIRFLOW_PKGS}] \
     && apk del .build-deps \
-    && apk --no-cache add postgresql-libs git
+    && apk --no-cache add postgresql-libs postgresql-client git
     
 # Add my custom DAG Repo manager plugin
 RUN pip install git+https://github.com/DACRepair/airflow-repoman.git
