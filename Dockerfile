@@ -6,10 +6,11 @@ RUN pip3 install --upgrade setuptools pip \
         build-base gcc \
         linux-headers libffi-dev libc-dev \
         musl-dev \
-        openssl-dev \
-        postgresql-dev python3-dev \
+        openldap-dev openssl-dev \
+        postgresql-dev python2-dev python3-dev \
     && pip install apache-airflow \
     && pip install apache-airflow[${AIRFLOW_PKGS}] \
+    && pip install python-ldap \
     && apk del .build-deps \
     && apk --no-cache add postgresql-libs postgresql-client git
     
